@@ -3,74 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            transition: background-color 0.5s, color 0.5s;
-        }
-        header, footer {
-            background: linear-gradient(90deg, #00bcd4, #4caf50);
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        .intro {
-            animation: fadeIn 1s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Aakash Budhathoki - Portfolio</title>
 </head>
 <body>
     <header>
-        <h1>My Professional Portfolio</h1>
+        <h1>Aakash Budhathoki</h1>
+        <p>Email: aakashbudhathoki10@gmail.com | Phone: +977-9863800583 | Location: Pepsicola Kathmandu | DOB: April 23, 1999</p>
     </header>
-    <section class="intro">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am a passionate developer with skills in various technologies.</p>
-    </section>
-    <section>
-        <h2>Projects</h2>
-        <p>Here are some of my projects:</p>
+    <nav>
         <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
+    <section id="about">
+        <h2>About</h2>
+        <p>Welcome to my portfolio! I am a Junior System Administrator at Genese Solutions with experience in Linux, Bash, Networking, Cybersecurity, AWS, and DevOps.</p>
     </section>
-    <section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Junior System Administrator at Genese Solutions (June - Sept 2025)</p>
+    </section>
+    <section id="skills">
         <h2>Skills</h2>
-        <p>My skill set includes:</p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
+        <p>Linux, Bash, Networking, Cybersecurity, AWS, DevOps</p>
     </section>
-    <section>
-        <h2>Certifications</h2>
-        <p>I have obtained the following certifications:</p>
-        <ul>
-            <li>Certification 1</li>
-            <li>Certification 2</li>
-        </ul>
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <p>10+ Certifications including Linux Foundation LFCS, Cisco certifications, AWS EC2, Python/Data Science.</p>
     </section>
-    <section>
-        <h2>Contact Information</h2>
-        <p>You can reach me at: myemail@example.com</p>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via email or phone.</p>
+        <p>Social Links: <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> | <a href="https://twitter.com/yourprofile">Twitter</a></p>
     </section>
     <footer>
-        <p>&copy; 2026 My Portfolio</p>
+        <p>&copy; 2026 Aakash Budhathoki. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
