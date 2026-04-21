@@ -3,53 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        header, footer {
+            background: linear-gradient(90deg, #00bcd4, #4caf50);
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .intro {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        <h1>My Professional Portfolio</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="about">
+    <section class="intro">
         <h2>About Me</h2>
-        <p>Hello! I am a passionate developer with a knack for creating amazing digital experiences.</p>
+        <p>Welcome to my portfolio! I am a passionate developer with skills in various technologies.</p>
     </section>
-    <section id="projects">
-        <h2>Projects Showcase</h2>
-        <div class="project-card">
-            <h3>Project One</h3>
-            <p>Description of project one.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project Two</h3>
-            <p>Description of project two.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project Three</h3>
-            <p>Description of project three.</p>
-        </div>
+    <section>
+        <h2>Projects</h2>
+        <p>Here are some of my projects:</p>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
     </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Send</button>
-        </form>
+    <section>
+        <h2>Skills</h2>
+        <p>My skill set includes:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Certifications</h2>
+        <p>I have obtained the following certifications:</p>
+        <ul>
+            <li>Certification 1</li>
+            <li>Certification 2</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Contact Information</h2>
+        <p>You can reach me at: myemail@example.com</p>
     </section>
     <footer>
-        <p>&copy; 2026 Aakash Budhathoki</p>
+        <p>&copy; 2026 My Portfolio</p>
     </footer>
 </body>
 </html>
