@@ -1,0 +1,43 @@
+# _data/projects.yml
+# ─────────────────────────────────────────────────────────────
+# Add your projects here. Each entry becomes a card on the site.
+#
+# Required: name, description, tags
+# Optional: icon (emoji), github (URL), demo (URL)
+# ─────────────────────────────────────────────────────────────
+
+- name: "Linux System Health Monitor"
+  icon: "🖥️"
+  description: >
+    A Bash script that collects key system metrics — CPU load, memory usage,
+    disk space, and failed services — and outputs a formatted report.
+    Designed to run via cron for daily status checks on production servers.
+  tags: [Bash, Linux, Monitoring, Cron]
+  github: "https://github.com/yourusername/linux-health-monitor"
+
+- name: "Automated Backup System"
+  icon: "💾"
+  description: >
+    A shell-based backup solution with configurable retention periods.
+    Compresses target directories into timestamped archives and automatically
+    prunes archives older than N days to control disk usage.
+  tags: [Bash, Linux, Backup, Automation]
+  github: "https://github.com/yourusername/auto-backup"
+
+- name: "DNS Lab with BIND9"
+  icon: "🌐"
+  description: >
+    Home lab setup of a full authoritative DNS server using BIND9 on Ubuntu.
+    Configured A, MX, and CNAME records, enabled DNSSEC for security,
+    and documented troubleshooting workflows using dig and nslookup.
+  tags: [DNS, BIND9, Linux, Networking, DNSSEC]
+  github: "https://github.com/yourusername/dns-lab"
+
+- name: "Python Data Analysis Pipeline"
+  icon: "📊"
+  description: >
+    A data processing pipeline built with Pandas and NumPy for cleaning,
+    analysing, and visualising datasets. Includes Matplotlib charts and
+    basic Scikit-learn classification models for predictive insights.
+  tags: [Python, Pandas, NumPy, Matplotlib, Scikit-learn]
+  github: "https://github.com/yourusername/data-pipeline"

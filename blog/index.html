@@ -1,0 +1,45 @@
+---
+layout: default
+title: Blog
+description: Thoughts on Linux, automation, and systems administration by Aakash Budhathoki.
+---
+
+<div class="blog-header">
+  <div class="container">
+    <h1><span class="accent">#</span> Blog</h1>
+    <p>Thoughts on Linux, automation, and sysadmin life.</p>
+  </div>
+</div>
+
+<div class="blog-posts-list">
+  <div class="container">
+
+    {% if site.posts.size > 0 %}
+
+    {% for post in site.posts %}
+    <article class="blog-list-item">
+      <time class="blog-list-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+      <div class="blog-list-body">
+        <a href="{{ post.url | relative_url }}" class="blog-list-title">{{ post.title }}</a>
+        <p class="blog-list-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+      </div>
+    </article>
+    {% endfor %}
+
+    {% else %}
+
+    <div class="no-posts">
+      <p>No posts yet. Create your first post in <code>_posts/</code>.</p>
+      <p style="margin-top: 10px; font-size: 0.82rem;">
+        File format: <code>YYYY-MM-DD-your-post-title.md</code>
+      </p>
+    </div>
+
+    {% endif %}
+
+  </div>
+</div>

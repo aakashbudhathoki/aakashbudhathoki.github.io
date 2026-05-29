@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+  <div class="container">
+    <header class="post-header">
+
+      <a href="{{ '/blog/' | relative_url }}" class="post-back">
+        ← Back to Blog
+      </a>
+
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+        {% if page.author %}
+        <span>by <span itemprop="author">{{ page.author }}</span></span>
+        {% endif %}
+      </div>
+
+      <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+
+      {% if page.tags and page.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+        <span class="post-card__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </header>
+  </div>
+
+  <div class="container post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>

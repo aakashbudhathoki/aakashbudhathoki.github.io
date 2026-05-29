@@ -1,0 +1,67 @@
+# _data/certifications.yml
+# ─────────────────────────────────────────────────────────────
+# Add new certifications here. Each entry becomes a card on the site.
+#
+# Required: name, issuer, date
+# Optional: icon (emoji), url (credential/badge link)
+# ─────────────────────────────────────────────────────────────
+
+- name: "Certified in Cybersecurity (CC)"
+  issuer: "ISC2"
+  date: "Feb 2026"
+  icon: "🔐"
+  url: ""
+
+- name: "Linux Foundation Certified System Administrator (LFCS)"
+  issuer: "KodeKloud"
+  date: "Jun–Sep 2025"
+  icon: "🐧"
+  url: ""
+
+- name: "Demystifying DNS"
+  issuer: "KodeKloud"
+  date: "Dec 2025"
+  icon: "🌐"
+  url: ""
+
+- name: "Network and Communications"
+  issuer: "KodeKloud"
+  date: "Aug–Sep 2025"
+  icon: "🔗"
+  url: ""
+
+- name: "Shell Scripts for Beginners"
+  issuer: "KodeKloud"
+  date: "May–Jun 2025"
+  icon: "💻"
+  url: ""
+
+- name: "Learning Linux Basics Course and Labs"
+  issuer: "KodeKloud"
+  date: "Jun 2025"
+  icon: "🐧"
+  url: ""
+
+- name: "Introduction to Cybersecurity"
+  issuer: "Cisco"
+  date: "Jul 2025"
+  icon: "🛡️"
+  url: ""
+
+- name: "DevOps"
+  issuer: "Broadway Infosys"
+  date: "Sep–Dec 2024"
+  icon: "⚙️"
+  url: ""
+
+- name: "AWS EC2"
+  issuer: "AWS Academy"
+  date: "Aug 2024"
+  icon: "☁️"
+  url: ""
+
+- name: "Python with Data Science"
+  issuer: "RTCD"
+  date: "Jun–Jul 2023"
+  icon: "🐍"
+  url: ""

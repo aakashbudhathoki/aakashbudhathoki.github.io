@@ -1,307 +1,395 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">JohnDoe</a>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+---
+layout: default
+title: Home
+description: >-
+  Junior System Administrator passionate about Linux environments and automation.
+  Based in Kathmandu, Nepal.
+---
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home" aria-label="Introduction">
+  <div class="container">
+    <div class="hero__content">
+
+      <div class="hero__tag">Available for opportunities</div>
+
+      <h1 class="hero__name">Aakash Budhathoki</h1>
+
+      <p class="hero__title">
+        <strong>Junior Systems Administrator</strong> &mdash;
+        Linux &bull; Python &bull; DevOps
+      </p>
+
+      <p class="hero__bio">
+        Passionate about the intersection of Linux environments and automation.
+        I focus on transforming academic theory into efficient IT operations —
+        whether writing Python scripts to automate repetitive tasks,
+        securing systems through monitoring and patching, or ensuring
+        rock-solid uptime for the people who depend on it.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn btn-outline">View Experience</a>
+      </div>
+
+      <div class="hero__socials">
+        <a href="mailto:{{ site.author.email }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          {{ site.author.email }}
+        </a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>scroll</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section class="section" id="skills" aria-labelledby="skills-heading">
+  <div class="container">
+    <h2 class="section-title" id="skills-heading">
+      <span class="accent">#</span> Skills
+    </h2>
+    <p class="section-subtitle">Technologies and tools I work with</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-category fade-in">
+        <p class="skill-category__label">Operating Systems</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Linux (Ubuntu)</span>
+          <span class="skill-tag">Linux (CentOS)</span>
+          <span class="skill-tag">macOS</span>
+          <span class="skill-tag">Windows Server</span>
         </div>
-    </nav>
+      </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm John Doe</h1>
-            <p class="hero-subtitle">Full Stack Developer | Designer | Problem Solver</p>
-            <p class="hero-description">
-                I create beautiful and functional websites that help businesses grow and succeed online.
-            </p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
+      <div class="skill-category fade-in">
+        <p class="skill-category__label">Scripting &amp; Programming</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Shell Scripting</span>
         </div>
-        <div class="hero-image">
-            <div class="placeholder-image">
-                <i class="fas fa-code"></i>
-            </div>
+      </div>
+
+      <div class="skill-category fade-in">
+        <p class="skill-category__label">Cloud &amp; Tools</p>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS EC2</span>
+          <span class="skill-tag">NinjaOne RMM</span>
+          <span class="skill-tag">Let's Encrypt</span>
+          <span class="skill-tag">Google Workspace</span>
+          <span class="skill-tag">Zoho</span>
         </div>
-    </section>
+      </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate full-stack developer with 5+ years of experience building web applications. 
-                        I specialize in creating responsive, user-friendly websites using modern technologies.
-                    </p>
-                    <p>
-                        I love turning complex problems into simple, beautiful, and intuitive designs. 
-                        When I'm not coding, you can find me learning new technologies or contributing to open-source projects.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat">
-                        <h3>30+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                </div>
-            </div>
+      <div class="skill-category fade-in">
+        <p class="skill-category__label">Networking</p>
+        <div class="skill-tags">
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">Firewalls</span>
+          <span class="skill-tag">DNS / BIND9</span>
+          <span class="skill-tag">DNSSEC</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">IP Subnetting</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-featured e-commerce platform built with React and Node.js, featuring payment integration and user authentication.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile App UI</h3>
-                    <p>A stunning mobile app interface design focusing on user experience and modern design principles.</p>
-                    <div class="project-tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">React Native</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>A real-time analytics dashboard that visualizes data and provides actionable insights for business decisions.</p>
-                    <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">D3.js</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Design System</h3>
-                    <p>A comprehensive design system and component library for consistent branding across multiple platforms.</p>
-                    <div class="project-tags">
-                        <span class="tag">Design</span>
-                        <span class="tag">Storybook</span>
-                        <span class="tag">Web Components</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3>Photo Gallery</h3>
-                    <p>An interactive photo gallery with lazy loading, filtering, and lightbox functionality.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-cog"></i>
-                    </div>
-                    <h3>API Management Tool</h3>
-                    <p>A powerful tool for managing, testing, and documenting REST APIs with team collaboration features.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">PostgreSQL</span>
-                    </div>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-            </div>
+      <div class="skill-category fade-in">
+        <p class="skill-category__label">Data &amp; Automation</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">systemd</span>
+          <span class="skill-tag">cron</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">HTML5</div>
-                        <div class="skill-item">CSS3</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Vue.js</div>
-                        <div class="skill-item">Responsive Design</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">Express.js</div>
-                        <div class="skill-item">Django</div>
-                        <div class="skill-item">REST APIs</div>
-                        <div class="skill-item">GraphQL</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">MongoDB</div>
-                        <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">MySQL</div>
-                        <div class="skill-item">Firebase</div>
-                        <div class="skill-item">Redis</div>
-                        <div class="skill-item">SQL</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">Git</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">AWS</div>
-                        <div class="skill-item">CI/CD</div>
-                        <div class="skill-item">Figma</div>
-                        <div class="skill-item">Agile</div>
-                    </div>
-                </div>
-            </div>
+      <div class="skill-category fade-in">
+        <p class="skill-category__label">Security</p>
+        <div class="skill-tags">
+          <span class="skill-tag">CIA Triad</span>
+          <span class="skill-tag">IDS / IPS</span>
+          <span class="skill-tag">MFA</span>
+          <span class="skill-tag">Patch Management</span>
+          <span class="skill-tag">Access Controls</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="contact-subtitle">Have a project in mind? Get in touch and let's create something amazing!</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:john@example.com">john@example.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>San Francisco, CA</p>
-                        </div>
-                    </div>
-                </div>
+    </div>
+  </div>
+</section>
 
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section class="section section-alt" id="experience" aria-labelledby="exp-heading">
+  <div class="container">
+    <h2 class="section-title" id="exp-heading">
+      <span class="accent">#</span> Experience
+    </h2>
+    <p class="section-subtitle">Where I've worked and what I've built</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <p class="timeline-date">June 2025 – September 2025</p>
+        <h3 class="timeline-role">Junior System Administrator</h3>
+        <p class="timeline-company">Genese Solutions &mdash; Lalitpur, Nepal</p>
+        <ul class="timeline-bullets">
+          <li>Supported Linux, macOS, and Windows environments plus enterprise apps including Google Workspace and Zoho.</li>
+          <li>Maintained hardware, software, and network access points while managing system backups.</li>
+          <li>Secured systems through timely patching and real-time monitoring via NinjaOne RMM.</li>
+          <li>Led IT onboarding sessions and security awareness training for new staff.</li>
+          <li>Managed vendor quotes and procurement for laptops and hardware purchases.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <p class="timeline-date">January 2024 – April 2024</p>
+        <h3 class="timeline-role">STEM Tutor</h3>
+        <p class="timeline-company">Self-Employed &mdash; Pepsicola, Kathmandu</p>
+        <ul class="timeline-bullets">
+          <li>Delivered one-on-one tutoring in STEM subjects to secondary-level students.</li>
+          <li>Guided students in developing critical thinking skills for mathematics and science.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+<section class="section" id="education" aria-labelledby="edu-heading">
+  <div class="container">
+    <h2 class="section-title" id="edu-heading">
+      <span class="accent">#</span> Education
+    </h2>
+    <p class="section-subtitle">Academic background</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <p class="timeline-date">April 2021 – April 2025</p>
+        <h3 class="timeline-role">Bachelor of Computer Engineering</h3>
+        <p class="timeline-company">Kantipur Engineering College &mdash; Lalitpur, Nepal</p>
+        <ul class="timeline-bullets">
+          <li>Studied Linux system concepts, Python automation scripting, and TCP/IP networking through coursework and hands-on labs.</li>
+          <li>Built foundational expertise in security principles, risk management, and incident response.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROJECTS
+     Driven by _data/projects.yml — add new projects there.
+     ============================================================ -->
+<section class="section section-alt" id="projects" aria-labelledby="proj-heading">
+  <div class="container">
+    <h2 class="section-title" id="proj-heading">
+      <span class="accent">#</span> Projects
+    </h2>
+    <p class="section-subtitle">
+      Things I've built. Add new projects in
+      <code class="badge">_data/projects.yml</code>
+    </p>
+
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <div class="project-card">
+
+        <div class="project-card__header">
+          <span class="project-card__icon" aria-hidden="true">{{ project.icon | default: "💻" }}</span>
+          <div class="project-card__links">
+            {% if project.github %}
+            <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.name }} source code">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+            {% endif %}
+            {% if project.demo %}
+            <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.name }} live demo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              Demo
+            </a>
+            {% endif %}
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 John Doe. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <h3 class="project-card__name">{{ project.name }}</h3>
+        <p class="project-card__desc">{{ project.description }}</p>
+
+        <div class="project-card__tags">
+          {% for tag in project.tags %}
+          <span class="project-tag">{{ tag }}</span>
+          {% endfor %}
         </div>
-    </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CERTIFICATIONS
+     Driven by _data/certifications.yml — add new certs there.
+     ============================================================ -->
+<section class="section" id="certifications" aria-labelledby="cert-heading">
+  <div class="container">
+    <h2 class="section-title" id="cert-heading">
+      <span class="accent">#</span> Certifications
+    </h2>
+    <p class="section-subtitle">
+      Training &amp; credentials. Add new ones in
+      <code class="badge">_data/certifications.yml</code>
+    </p>
+
+    <div class="certs-grid">
+      {% for cert in site.data.certifications %}
+      <div class="cert-card">
+        <div class="cert-card__icon" aria-hidden="true">{{ cert.icon | default: "🏅" }}</div>
+        <div class="cert-card__body">
+          <p class="cert-card__name">
+            {% if cert.url and cert.url != "" %}
+              <a href="{{ cert.url }}" target="_blank" rel="noopener noreferrer">{{ cert.name }}</a>
+            {% else %}
+              {{ cert.name }}
+            {% endif %}
+          </p>
+          <p class="cert-card__issuer">{{ cert.issuer }}</p>
+          <p class="cert-card__date">{{ cert.date }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BLOG
+     Posts live in _posts/YYYY-MM-DD-title.md
+     ============================================================ -->
+<section class="section section-alt" id="blog" aria-labelledby="blog-heading">
+  <div class="container">
+    <h2 class="section-title" id="blog-heading">
+      <span class="accent">#</span> Blog
+    </h2>
+    <p class="section-subtitle">
+      Thoughts on Linux, automation, and sysadmin life.
+      Add new posts in <code class="badge">_posts/</code>
+    </p>
+
+    {% if site.posts.size > 0 %}
+
+    <div class="posts-grid">
+      {% for post in site.posts limit: 3 %}
+      <a href="{{ post.url | relative_url }}" class="post-card">
+        <p class="post-card__date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h3 class="post-card__title">{{ post.title }}</h3>
+        <p class="post-card__excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 22 }}
+        </p>
+        {% if post.tags.first %}
+        <span class="post-card__tag">{{ post.tags.first }}</span>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size > 3 %}
+    <div class="blog-cta">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">
+        View all posts &rarr;
+      </a>
+    </div>
+    {% endif %}
+
+    {% else %}
+
+    <div class="no-posts">
+      <p>No posts yet. Create your first post in <code>_posts/</code>.</p>
+      <p style="margin-top:10px; font-size:0.82rem;">
+        File format: <code>YYYY-MM-DD-your-post-title.md</code>
+      </p>
+    </div>
+
+    {% endif %}
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-inner">
+
+      <h2 class="section-title" id="contact-heading">
+        <span class="accent">#</span> Contact
+      </h2>
+      <p class="contact-desc">
+        Interested in working together or just want to chat about Linux and
+        automation? Feel free to reach out — I'm always happy to connect.
+      </p>
+
+      <div class="contact-links">
+
+        <a href="mailto:{{ site.author.email }}" class="contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          {{ site.author.email }}
+        </a>
+
+        <a href="https://github.com/{{ site.github_username }}"
+           target="_blank" rel="noopener noreferrer" class="contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}"
+           target="_blank" rel="noopener noreferrer" class="contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+
+        <a href="tel:+9779863800583" class="contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.92-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.83 16.92z"/></svg>
+          +977 9863800583
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
