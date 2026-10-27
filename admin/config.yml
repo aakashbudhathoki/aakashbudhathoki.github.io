@@ -2,8 +2,7 @@ backend:
   name: github
   repo: aakashbudhathoki/aakashbudhathoki.github.io
   branch: main
-  auth_type: pkce
-  app_id: Ov23lin5ryBetQTNekqK
+  auth_type: ""
 
 site_url: https://budhathokiaakash.com.np
 display_url: https://budhathokiaakash.com.np
