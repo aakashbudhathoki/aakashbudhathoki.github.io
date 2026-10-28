@@ -1094,109 +1094,136 @@ code, pre { font-family: var(--mono); }
 }
 
 /* ============================================================
-   INTERACTIVE TERMINAL
+   INTERACTIVE TERMINAL — Night Owl Theme
    ============================================================ */
 .terminal {
-  background: #0d1117;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--r-lg);
+  background: #011627;
+  border: 1px solid #1d3b53;
+  border-radius: 12px;
   overflow: hidden;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 [data-theme="light"] .terminal {
-  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .terminal__bar {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 18px;
-  background: #161b22;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 11px 16px;
+  background: #011627;
+  border-bottom: 1px solid #1d3b53;
+  position: relative;
 }
 
 .terminal__dots {
   display: flex;
-  gap: 7px;
+  gap: 8px;
+  z-index: 1;
 }
 
 .terminal__dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+  transition: opacity 0.2s;
 }
 
-.terminal__dot--red    { background: #ff5f57; }
-.terminal__dot--yellow { background: #febc2e; }
-.terminal__dot--green  { background: #28c840; }
+.terminal__dot:hover { opacity: 0.8; }
+.terminal__dot--red    { background: #ef5350; }
+.terminal__dot--yellow { background: #ecc48d; }
+.terminal__dot--green  { background: #addb67; }
 
 .terminal__title {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: #8b949e;
-  flex: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
-  margin-right: 54px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: #637777;
+  letter-spacing: 0.3px;
+  pointer-events: none;
 }
 
 .terminal__body {
-  padding: 20px;
-  min-height: 260px;
-  max-height: 400px;
+  padding: 18px 20px 20px;
+  min-height: 280px;
+  max-height: 420px;
   overflow-y: auto;
   font-family: var(--mono);
-  font-size: 0.85rem;
-  line-height: 1.7;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  scrollbar-width: thin;
+  scrollbar-color: #1d3b53 transparent;
+}
+
+.terminal__body::-webkit-scrollbar { width: 6px; }
+.terminal__body::-webkit-scrollbar-track { background: transparent; }
+.terminal__body::-webkit-scrollbar-thumb {
+  background: #1d3b53;
+  border-radius: 3px;
 }
 
 .terminal__output {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .terminal__line {
-  margin-bottom: 2px;
-  color: #c9d1d9;
+  margin-bottom: 1px;
+  color: #d6deeb;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
 .terminal__line--system {
-  color: #8b949e;
+  color: #637777;
+  font-style: italic;
 }
 
 .terminal__line--prompt {
-  color: #c9d1d9;
+  color: #d6deeb;
 }
 
 .terminal__line--prompt .terminal__user {
-  color: #28c840;
+  color: #addb67;
+  font-weight: 500;
 }
 
 .terminal__line--prompt .terminal__host {
-  color: #58a6ff;
+  color: #82aaff;
+  font-weight: 500;
 }
 
 .terminal__cmd {
-  color: var(--cyan);
+  color: #7fdbca;
   font-weight: 500;
 }
 
 .terminal__line--error {
-  color: #f85149;
+  color: #ef5350;
 }
 
 .terminal__line--accent {
-  color: var(--cyan);
+  color: #7fdbca;
 }
 
 .terminal__line--heading {
-  color: #f0f6fc;
+  color: #c792ea;
   font-weight: 600;
-  margin-top: 4px;
+  margin-top: 6px;
+}
+
+.terminal__line--label {
+  color: #ecc48d;
 }
 
 .terminal__input-row {
@@ -1205,17 +1232,19 @@ code, pre { font-family: var(--mono); }
 }
 
 .terminal__prompt {
-  color: #c9d1d9;
+  color: #d6deeb;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .terminal__prompt .terminal__user {
-  color: #28c840;
+  color: #addb67;
+  font-weight: 500;
 }
 
 .terminal__prompt .terminal__host {
-  color: #58a6ff;
+  color: #82aaff;
+  font-weight: 500;
 }
 
 .terminal__input {
@@ -1223,10 +1252,19 @@ code, pre { font-family: var(--mono); }
   background: transparent;
   border: none;
   outline: none;
-  color: #c9d1d9;
+  color: #d6deeb;
   font-family: var(--mono);
-  font-size: 0.85rem;
-  caret-color: var(--cyan);
+  font-size: 0.82rem;
+  caret-color: #80a4c2;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal__input:focus {
+  caret-color: #7fdbca;
 }
 
 /* ============================================================
