@@ -61,6 +61,46 @@ description: >-
 
 
 <!-- ============================================================
+     INTERACTIVE TERMINAL
+     ============================================================ -->
+<section class="section section-alt" id="terminal" aria-labelledby="term-heading">
+  <div class="container">
+    <h2 class="section-title" id="term-heading">
+      <span class="accent">#</span> Terminal
+    </h2>
+    <p class="section-subtitle">Try typing a command below — type <code class="badge">help</code> to get started</p>
+
+    <div class="terminal">
+      <div class="terminal__bar">
+        <div class="terminal__dots">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--yellow"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+        </div>
+        <span class="terminal__title">aakash@portfolio:~</span>
+      </div>
+      <div class="terminal__body" id="terminal-body">
+        <div class="terminal__output" id="terminal-output">
+          <p class="terminal__line terminal__line--system">Welcome to Aakash's interactive portfolio terminal.</p>
+          <p class="terminal__line terminal__line--system">Type <span class="terminal__cmd">help</span> to see available commands.</p>
+        </div>
+        <div class="terminal__input-row">
+          <span class="terminal__prompt"><span class="terminal__user">visitor</span>@<span class="terminal__host">portfolio</span>:~$&nbsp;</span>
+          <input type="text"
+                 class="terminal__input"
+                 id="terminal-input"
+                 autocomplete="off"
+                 spellcheck="false"
+                 autofocus
+                 aria-label="Terminal command input">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      SKILLS
      ============================================================ -->
 <section class="section" id="skills" aria-labelledby="skills-heading">

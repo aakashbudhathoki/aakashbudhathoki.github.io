@@ -16,6 +16,11 @@
 <!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Blog" href="{{ '/feed.xml' | relative_url }}">
 
+<!-- Theme flash prevention -->
+<script>
+  try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+</script>
+
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
